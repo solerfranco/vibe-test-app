@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
-// Versión y firma vienen del entorno (el orquestador las pone al publicar). Nada de secretos en el repo.
+// Versi??n y firma vienen del entorno (el orquestador las pone al publicar). Nada de secretos en el repo.
 // APP_VERSION_NAME: semver, p. ej. 1.2.0. APP_VERSION_CODE: entero que sube en cada release.
 val versionNameEnv = System.getenv("APP_VERSION_NAME")?.takeIf { it.isNotBlank() } ?: "0.1.0"
 val versionCodeEnv = System.getenv("APP_VERSION_CODE")?.toIntOrNull() ?: 1
@@ -21,6 +21,8 @@ android {
         targetSdk = 36
         versionCode = versionCodeEnv
         versionName = versionNameEnv
+        // Repo de GitHub de donde salen las actualizaciones. Lo pone create-app al crear la app.
+        buildConfigField("String", "UPDATE_REPO", "\"solerfranco/vibe-test-app\"")
     }
 
     signingConfigs {
@@ -62,3 +64,4 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.core:core-ktx:1.16.0")
 }
+
