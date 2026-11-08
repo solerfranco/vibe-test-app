@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                        Text("App plantilla")
+                        Text("Hola desde Telegram")
                     }
                 }
             }
