@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                        Text("Hola desde Telegram")
+                        Text("Hola de nuevo")
                     }
                 }
             }
